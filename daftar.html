@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar | SaToCut</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caladea|Poppins:400,500,700">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+</head>
+<body>
+    <div class="back-img"></div>
+    <a href="index.html"> 
+        <img src="images/logo-black.png" alt="SaToCut" height="50px" class="fixed-logo">
+    </a>
+    <div class="back-container">
+        <div class="daftar-row1">
+            <h2>Daftar Akun</h2>
+            
+            <form id="daftar-form">
+                <div class="input-contain">
+                    <input class="ft-white bb-white required" type="text" id="name" name="name" autocomplete="off" value="" aria-labelledby="placeholder-fname">
+                    <label class="ft-white placeholder-text" for="name" id="placeholder-name">
+                       <div class="ft-white text">Nama Lengkap</div>
+                    </label>
+                </div>
+                <div class="input-contain">
+                    <input class="ft-white bb-white required" type="email" id="email" name="email" autocomplete="off" value="" aria-labelledby="placeholder-email">
+                    <label class="ft-white placeholder-text" for="email" id="placeholder-email">
+                       <div class="ft-white text">Email</div>
+                    </label>
+                </div>
+                <div class="input-contain">
+                    <input class="ft-white bb-white required" type="text" id="username" name="username" autocomplete="off" value="" aria-labelledby="placeholder-username">
+                    <label class="ft-white placeholder-text" for="username" id="placeholder-username">
+                       <div class="ft-white text">Username</div>
+                    </label>
+                </div>
+                <div class="input-contain">
+                    <input class="ft-white bb-white required" type="password" id="pass" name="pass" autocomplete="off" value="" aria-labelledby="placeholder-pass">
+                    <label class="ft-white placeholder-text" for="pass" id="placeholder-pass">
+                       <div class="ft-white text">Password</div>
+                    </label>
+                </div>
+            </form>
+            <button class="daftar-btn mb-3">Daftar</button>
+            <span class="cpr ft-white">Copyright © 2022 SaToCut</span>
+        </div>
+        <div class="daftar-row2">
+            <h2>Sudah Punya Akun?</h2>
+            <span class="cpr ft-black mb-2">Tinggal login aja kak hehe</span>
+            <button id="login-btn" class="login-btn">Log In</button>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            document.getElementById('login-btn').onclick = function() {
+                location.href = 'login.html';
+            };
+
+            let input_element1 = document.querySelector("#name");
+            input_element1.addEventListener("keyup", () => {
+                input_element1.setAttribute("value", input_element1.value);
+            });
+
+            let input_element4 = document.querySelector("#email");
+            input_element4.addEventListener("keyup", () => {
+                input_element4.setAttribute("value", input_element4.value);
+            });
+
+            let input_element2 = document.querySelector("#pass");
+            input_element2.addEventListener("keyup", () => {
+                input_element2.setAttribute("value", input_element2.value);
+            });
+
+            let input_element3 = document.querySelector("#username");
+            input_element3.addEventListener("keyup", () => {
+                input_element3.setAttribute("value", input_element3.value);
+            });
+
+            $('#daftar-form').validate( {
+                rules: {
+                    username: {
+                        maxlength: 10
+                    },
+                    email: {
+                        email: true
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -7,31 +7,38 @@
     <title>SaToCut</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caladea|Poppins">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
 </head>
 <body>
     <nav>
-        <img src="images/logo-white.png" alt="SaToCut" height="50px">
-        <div class="nav-gr-r">
+        <a href="">
+            <img src="images/logo-white.png" alt="SaToCut" height="50px">
+        </a><div class="nav-gr-r">
             <div class="nav-card">
-                <a href="">HOME</a>
+                <a id="home-nav" href="#">HOME</a>
             </div>
             <div class="nav-card">
-                <a href="#about">ABOUT</a>
+                <a id="about-nav" href="#about">ABOUT</a>
             </div>
             <div class="nav-card">
-                <a href="#services">SERVICES</a>
+                <a id="services-nav" href="#services">SERVICES</a>
             </div>
             <div class="nav-card">
-                <a href="#galery">GALERY</a>
+                <a id="galery-nav" href="#galery">GALERY</a>
             </div>
+            <div class="nav-card">
+                <button id="login-btn" class="nav-login-btn">Log In</button>
+            </div>
+            
         </div>
     </nav>
     <img src="images/landing-main.png" alt="" width="100%" style="height:100vh; filter:brightness(50%);">
     <div class="fixed-card">
         <span class="land-title-big">Born To </br>Be Handsome</span>
-        <span class="land-title-small">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae itaque ab quisquam, illum beatae maiores explicabo quod error culpa fuga consequatur, asperiores harum ducimus. Error asperiores id in illo at?</span>
+        <span class="land-title-small">SaTo Cut Barbershop merupakan barbershop atau tempat potong rambut modern yang menyediakan berbagai layanan Hair Treatment, fasilitas yang lengkap, serta barber berpengalaman. Nikmati sesi perawatan rambut terbaik anda di sini.</span>
     </div>
-    <button class="land-btn">Book Now</button>
+    <button id="book-btn" class="land-btn">Book Now</button>
     <div class="vl"></div>
     <div class="content-container">
         <div class="row-2 ai-c">
@@ -40,8 +47,8 @@
         </div>
         <div class="row-2 jc-c">
             <h2>Story</h2>
-            <p>&emsp;&emsp;&emsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum et ea eaque. Voluptate alias tempora adipisci, delectus esse, exercitationem eligendi similique magnam quibusdam animi omnis nostrum itaque minima ad explicabo?</p>
-            <p>&emsp;&emsp;&emsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam laudantium architecto voluptate magnam consequuntur ducimus cupiditate est, fugiat nobis minus officiis non consequatur! Expedita ullam sint magni, consequuntur porro provident.</p>
+            <p>&emsp;&emsp;&emsp;SaTo Cut barbershop merupakan usaha atau startup pelayanan jasa yang bergerak dibidang styling rambut pria. barbershop ini dirintis oleh kedua teman akrab yang bernama mas Salim dan mas Tito. Beliau telah menjalani usaha ini sejak tahun 2015 silam. Dimulai dari hanya menyediakan jasa potong rambut disebuah ruko kecil hingga saat ini telah memiliki 3 buah barbershop yang tersebar di Jakarta, Surabaya, dan Sumenep.</p>
+            <p>&emsp;&emsp;&emsp;Setelah sukses mendirikan usaha barbershop ini di tahun 2020 akhir mereka membuat inovasi baru untuk barbershop ini dengan cara membuat sebuah website bernama SaToCut.my.id. Dimana website ini berisikan tentang informasi usaha barber mereka, barberman mereka dan fitur yang paling berguna adalah reservasi online. reservasi online ini digunakan untuk meminimalisir antrian yang banyak untuk membatasi penyebaran wabah virus Covid-19 pada kala itu. Namun fitur ini masih bisa kita gunakan jika kita malas untuk mengantri</p>
         </div>
     </div>
     <div class="content-container">
@@ -70,7 +77,7 @@
             </div>
             <div class="svc-card fd-c jc-s">
                 <h2>Shaving</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae eos nulla sit error pariatur iusto modi officia dolores quaerat, sed eveniet deserunt blanditiis quam quis adipisci. Quia odit iure commodi.</p>
+                <p>Di SaTo Cut barbershop anda juga dapat merapikan atau membersihkan kumis dan janggut. Disini terdapat berbagai macam cara merapikan kumis atau janggut kalian. Diantaranya adalah merapikan dengan alat pisau cukur atau gunting cukur khusus. Selain itu kalian juga dapat meminta untuk menambahkan busa cukur terlebih dahulu sebelum dirapikan. </p>
             </div>
             <div class="svc-card jc-c ai-s">
                 <img class="svc-img" src="images/color 1.png" alt="">
@@ -78,14 +85,14 @@
             </div>
             <div class="svc-card fd-c jc-s">
                 <h2>Hair Treatment</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus quos officia esse placeat corporis sapiente blanditiis. Repudiandae, expedita explicabo maxime eum excepturi illo rerum nihil amet ab tenetur nulla voluptatem!</p>
+                <p>Tidak hanya membuat penampilan anda makin tampan, di barbershop kami juga menyediakan pelayan hait treatment guna menjaga kesehatan rambut kalian. Adapun treatment yang disediakan adalah vitamin rambut, hairloss treartment dan masih banyak lainnya</p>
             </div>
         </div>
         <div class="row-2">
             <h1> </h1>
             <div class="svc-card fd-c jc-s">
                 <h2>Haircut</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae eos nulla sit error pariatur iusto modi officia dolores quaerat, sed eveniet deserunt blanditiis quam quis adipisci. Quia odit iure commodi.</p>
+                <p>Di SaTo Cut barbershop, haircut atau potong rambut menjadi layanan utama yang ada pada barbershop kami. Barber kami telah menyediakan album yang berisikan model-model rambut terbaik di barbershop kami. Selain melihat album model rambut kalian juga dapat me-request pada barberman kita sesuai dengan keinginan kalian, dan tentunya hasilnya tidak akan mengecewakan.</p>
             </div>
             <div class="svc-card jc-c ai-s">
                 <img class="svc-img" src="images/shave1.png" alt="">
@@ -93,7 +100,7 @@
             </div>
             <div class="svc-card fd-c jc-s">
                 <h2>Hair Coloring</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus nostrum recusandae quisquam, ratione saepe eum provident dicta aut molestiae hic quas nisi quis fuga nobis dolores reprehenderit? Repellendus, aut quo!</p>
+                <p>Setelah puas dengan potongan rambut di SaTo Cut Barbershop, kalian dapat lebih memaksimalkan ketampanan kalian dengan merubah warna rambut kalian untuk membuat suasana yang baru. Proses ini dapat dilakukan diwaktu yang bersamaan setelah anda melakukan potong rambut di barbeshop kami ataupun di hari yang berbeda dengan hari anda potong rambut dengan ketentuan sudah melakukan reservasi atau pemesanan.</p>
             </div>
             <div class="svc-card jc-c ai-s">
                 <img class="svc-img" src="images/ht 1.png" alt="">
@@ -103,10 +110,10 @@
         </div>
     </div>
     <div class="mini-container">
-        d
+        
     </div>
     <div class="mini-container2 bg-black">
-        d
+        
     </div>
         
         <div class="price-container-bd">
@@ -170,5 +177,16 @@
              <img src="images/logo-cream.png" alt="" height="80px">
         </div>
     </div>
+    <script>
+        $(document).ready(function() {
+            document.getElementById('book-btn').onclick = function() {
+                location.href = 'login.html';
+            };
+
+            document.getElementById('login-btn').onclick = function() {
+                location.href = 'login.html';
+            };
+        });
+    </script>
 </body>
 </html>
